@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  <body>
+    <p id="pre"></p>
+    <script>
+    
+    function createPalindrome(input, b, isOdd)
+    {
+        let n = input;
+        let palin = input;
+ 
+       
+        if (isOdd == 1)
+            n = parseInt(n / b, 10);
+ 
+        
+        while (n > 0)
+          {
+            palin = palin * b + (n % b);
+            n = parseInt(n / b, 10);
+        }
+        return palin;
+    }
+ 
+  
+    function generatePalindromes(n)
+    {
+        let number;
+ 
+       
+        for (let j = 0; j < 2; j++)
+        {
+          let i = 1;
+            while ((number = createPalindrome(i, 10, j % 2)) < n)
+            {
+                document.write(number + " ");
+                i++;
+            }
+        }
+    }
+     
+    let n = 5;
+    document.getElementById("pre").innerHTML =generatePalindromes(n);
+    
+   
+</script>
+
+  </body>
+</html>

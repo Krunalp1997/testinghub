@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  <body>
+Enter the  Month  :-
+  <input type="text" id="monthDays"/><button onclick="findDays()"> SUBMIT </button><br>
+     The entered month is  <b id="days"> </b>
+    <script>
+      function findDays()
+     {
+
+      let insert=document.getElementById("monthDays").value;
+          
+       
+
+         
+         if(insert > 12)
+          {
+            document.getElementById("days").innerHTML="Not Valid"
+          }
+          else if (insert <= 0)
+          {
+           document.getElementById("days").innerHTML="Not Valid"
+           }
+          else  if ( (insert==4) || (insert==6) || (insert==9) || (insert==11) )
+         
+            //if((insert==1)||(insert==3)||(insert==5)||(insert==7)||(insert==8))
+           
+            {
+              document.getElementById("days").innerHTML="Enetered month has 30 days";
+            }
+            //else if((insert==4)||(insert==6)||(insert==9)||(insert==11))
+           else if(insert==2)
+            {
+               document.getElementById("days").innerHTML="Enetered month has 28 or 29 days";
+            }
+            else
+            {
+               document.getElementById("days").innerHTML="Enetered month has 31 days";
+            }
+          }
+    </script>
+  </body>
+</html>

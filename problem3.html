@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    
+    
+  </head>
+  <body>
+    <p id="problem" ></p>
+    <p id = "lem"></p>
+    <script>
+function area_equi_triangle(side)
+{
+    return (((Math.sqrt(3)) / 4) * side * side).toFixed(2);
+}
+
+var side = 20;
+document.getElementById("problem").innerHTML =("Area of Equilateral Triangle:");
+document.getElementById("lem").innerHTML =(area_equi_triangle(side)+"\n");
+    </script>
+  </body>
+</html>

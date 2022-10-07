@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    
+    
+  </head>
+  <body>
+    <p id ="rot"></p>
+    <script>
+
+ 
+
+function leftRotate(arr, n, k){
+   
+    let mod = k % n;
+ 
+    
+    for (let i = 0; i < n; i++)
+        document.write((arr[(mod + i) % n]) + " ");
+ 
+    document.write("\n");
+}
+    let arr = [ 1, 2, 3, 4, 5, 6, 7 ];
+let n = arr.length;
+ 
+let k = 3;
+
+document.getElementById("rot").innerHTML =leftRotate(arr, n, k);
+
+ 
+
+ 
+</script>
+
+  </body>
+</html>

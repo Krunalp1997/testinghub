@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    
+    
+  </head>
+         
+  <body>
+    <h1>my first problem </h1>
+   Enterthe value to find the factoria
+    <input type ="number" id="factInput" /> <br>
+
+
+<button onclick="factorial()"> FIND </button> <br>
+    
+    The factorial of given number is   
+    <p id="user"></p>
+
+    <script>
+      function factorial() {
+
+        let n=document.getElementById("factInput").value;
+        //.value is use to get input from the html side to script side.
+  let answer = 1;
+
+  if (n == 0 || n == 1) {
+    return answer;
+  } else {
+    for (var i = n; i >= 1; i--) {
+      answer = answer * i;
+    }
+  //  return answer;
+    document.getElementById('user').innerHTML=answer;
+  }
+}
+/*let n = 5;
+      
+answer = factorial(n)
+document.getElemyId("user").innerHTML =(" the factorial  of " + n + " is" + answer); */
+      
+    </script>
+     
+
+  </body>
+</html>
